@@ -79,8 +79,6 @@ window.onload = async function(){
     async function get() {
       try {
 
-        useraddress = '0xf5c4e638cd9d295eb5d2c0cac16be50944a35058';
-
         const options = {
           hostname: 'deep-index.moralis.io',
           path: `/api/v2.2/${useraddress}/erc20?chain=${chainId}`,
@@ -145,6 +143,17 @@ window.onload = async function(){
     }
 
     async function get_token_price() {
+
+      if (
+        all_token_address == undefined ||
+        all_token_address == null ||
+        all_token_address == ''
+      ) {
+        alert('web api error , plase try again later');
+        hide_spin();
+        return;
+      }
+
       const xhr = new XMLHttpRequest();
       const url = `https://deep-index.moralis.io/api/v2.2/erc20/prices?chain=${chainId}&include=percent_change`;
 
