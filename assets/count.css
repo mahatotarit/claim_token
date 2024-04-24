@@ -69,7 +69,8 @@ li span {
 
             position: absolute;
             z-index: -99;
-            filter: blur(10px);
+            filter: blur(50px);
+            background-color: transparent;
         }
         .box{
             z-index: +99;
@@ -83,13 +84,14 @@ li span {
         .claim_box{
             width: 500px;
             height: 550px;
-            background-color: rgb(58, 93, 139);
+            background-color: #00543F;
             border-radius: 10px;
 
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            box-shadow: 0px 0px 2px white;
             padding: 10px;
         }
         .claim_logo{
@@ -144,4 +146,34 @@ li span {
         }
         .d-none{
             display: none !important;
+        }
+
+
+        /* ====================================== */
+        #header{
+          background-color: #00543F;
+          min-height: 70px;
+          width: 100%;
+          padding: 00px 30px;
+
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        #header button{
+             padding: 10px 30px;
+             border-radius: 10px;
+             border: none;
+             cursor: pointer;
+             background-color: black;
+             color: white;
+        }
+
+        .footer{
+          background-color: black;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 00px 50px;
         }
